@@ -1,15 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet ,Image} from 'react-native'
 // import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { weatherConditions } from '../utils/WeatherConditions'
-const Weather = ({ weather, temperature,pressure,humidity}) => {
+import { weatherConditions } from '../weatherdata/WeatherConditions'
+const Weather = ({ weather, temperature ,pressure ,humidity }) => {
   return (
     <View
       style={[
-        styles.weatherContainer,
-        { backgroundColor: weatherConditions[weather].color }
-      ]}
-    >
+        styles.weatherContainer,{ backgroundColor: weatherConditions[weather].color } ]} >
+      
       <View style={styles.headerContainer}>
           <Image style={{width: 100, height: 100}}
              source={{uri:weatherConditions[weather].image }}/>
@@ -17,7 +15,7 @@ const Weather = ({ weather, temperature,pressure,humidity}) => {
           <Text style={styles.tempText}>{temperature}˚</Text>
       </View>                   
       
-      <View style={styles.headerContainer1}>      
+      <View style={styles.headerContainer1}>     
           <Text style={styles.Text}>Pressure:{pressure}</Text>
           <Text style={styles.Text}>Humidity:{humidity}</Text>      
       </View>       
@@ -62,7 +60,7 @@ const styles = StyleSheet.create({
     
   },
   title: {
-    fontSize: 48,
+    fontSize: 35,
     color: '#fff',
     paddingLeft: 20,
   },

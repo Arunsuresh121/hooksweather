@@ -2,7 +2,7 @@ export const weatherConditions = {
 
     Default: {
       color: '#C5BC05',
-      title: 'Weather Updates',
+      title: 'Weather Updates......',
       subtitle: '',
       icon: '',
       image:"http://clipart-library.com/images_k/transparent-weather/transparent-weather-11.png"
